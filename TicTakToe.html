@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="decription" content="TicTakToeGame">
+        <meta name="keywords" content="JavaScript">
+        <meta name="author" content="Amirali Ahmadi">
+        <meta name="viewport" content="">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>TicTakToe</title>
+    </head>
+    <body>
+        <table id="table">
+            <tr>
+                <td>
+                    <button class="cell" onclick="show_index(0 , 0)"></button>
+                </td>
+                <td>
+                    <button class="cell" onclick="show_index(0 , 1)"></button>
+                </td>
+                <td>
+                    <button class="cell" onclick="show_index(0 , 2)"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="cell" onclick="show_index(1 , 0)"></button>
+                </td>
+                <td>
+                    <button class="cell" onclick="show_index(1 , 1)"></button>
+                </td>
+                <td>
+                    <button class="cell" onclick="show_index(1 , 2)"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="cell" onclick="show_index(2 , 0)"></button>
+                </td>
+                <td>
+                    <button class="cell" onclick="show_index(2 , 1)"></button>
+                </td>
+                <td>
+                    <button class="cell" onclick="show_index(2 , 2)"></button>
+                </td>
+            </tr>
+        </table>
+        <p>X scores:<b id="score_x">0</b></p>
+        <div id="xx">X Winner <p style="font-size: 15px;">OnClick</p></div>
+        <p>O scores:<b id="score_o">0</b></p>
+        <div id="oo">O Winner <p style="font-size: 15px;">OnClick</p></div>
+        <p>Draw:    <b id="score_draw">0</b></p>
+        <div id="dd">Draw <p style="font-size: 15px;">OnClick</p></div>
+        <button id="reset">New Game</button>
+    </body>
+    <script src="TicTakToe.js"></script>
+</html>
