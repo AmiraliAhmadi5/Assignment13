@@ -18,33 +18,74 @@ var flags = [[null , null , null],
              [null , null , null],
              [null , null , null]];
 var ply = "x";
-/*test*/
-
-/*finish*/
+/*********************test**************************/
+var players = document.getElementById("players");
+var cpu = document.getElementById("cpu");
+var one_or_two = 0;
+players.onclick = function(){
+    one_or_two = 1;
+}
+cpu.onclick = function(){
+    one_or_two = 2;
+}
 function show_index(x , y){
-    if (flags[x][y] == null){
-        if(ply == "x"){
-            flags[x][y] = "x";
-            buttons[x][y].innerHTML = "X";
-            buttons[x][y].classList.add("x");
-            ply = "o";
-            num_counter++;
-            num = num_counter;
+    if(one_or_two == 1){
+        if (flags[x][y] == null){
+            if(ply == "x"){
+                flags[x][y] = "x";
+                buttons[x][y].innerHTML = "X";
+                buttons[x][y].classList.add("x");
+                ply = "o";
+                num_counter++;
+                num = num_counter;
+            }
+            else if(ply == "o"){
+                flags[x][y] = "o";
+                buttons[x][y].innerHTML = "O";
+                buttons[x][y].classList.add("o");
+                ply = "x";
+                num_counter++;
+                num = num_counter;
+            }
         }
-        else if(ply == "o"){
-            flags[x][y] = "o";
-            buttons[x][y].innerHTML = "O";
-            buttons[x][y].classList.add("o");
-            ply = "x";
-            num_counter++;
-            num = num_counter;
+        else{
+            alert("noooo");
+        }
+    }
+    else if(one_or_two == 2){
+        if (flags[x][y] == null){
+            if(ply == "x"){
+                flags[x][y] = "x";
+                buttons[x][y].innerHTML = "X";
+                buttons[x][y].classList.add("x");
+                ply = "o";
+                num_counter++;
+                num = num_counter;
+            }
+            else if(ply == "o"){
+                if(flags != null){
+                    x = Math.floor(Math.random(0) * 3);
+                    y = Math.floor(Math.random(0) * 3);
+                    flags[x][y] = "o";
+                    buttons[x][y].innerHTML = "O";
+                    buttons[x][y].classList.add("o");
+                }
+                ply = "x";
+                num_counter++;
+                num = num_counter;
+            }
+        }
+        else{
+            alert("noooo");
         }
     }
     else{
-        alert("noooo");
+        alert("what????");
     }
-    check_game();
+        check_game();
+    
 }
+/************************************************/
 /*
 function show_index(x , y){
     if (flags[x][y] == null){
@@ -248,4 +289,5 @@ reset.onclick = function(){
     score_draw.innerHTML = score_draw_counter;
     num_counter = 0;
     num.innerHTML = num_counter;
+    one_or_two = 0;
 }                                           
