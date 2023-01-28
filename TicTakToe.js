@@ -65,10 +65,19 @@ function show_index(x , y){
             else if(ply == "o"){
                 x = Math.floor(Math.random(null) * 3);
                 y = Math.floor(Math.random(null) * 3);
-                    while(flags[x][y] == null){
+                    if(flags[x][y] == null){
                         buttons[x][y].classList.add("o");
                         flags[x][y] = "o";
                         buttons[x][y].innerHTML = "O";
+                    }
+                    else if(flags[x][y] != null){
+                        x = Math.floor(Math.random(null) * 3);
+                        y = Math.floor(Math.random(null) * 3);
+                        if(flags[x][y] == null){
+                            buttons[x][y].classList.add("o");
+                            flags[x][y] = "o";
+                            buttons[x][y].innerHTML = "O";
+                        }
                     }
                     num_counter++;
                     num = num_counter;
@@ -264,3 +273,17 @@ reset.onclick = function(){
     num.innerHTML = num_counter;
     one_or_two = 0;
 }                                           
+if(xx.style.display == "inline"){
+    dd.style.display = "none";
+    num_counter = 0;
+    num.innerHTML = num_counter;
+}
+if(oo.style.display == "inline"){
+    dd.style.display = "none";
+    num_counter = 0;
+    num.innerHTML = num_counter;
+}
+if(dd.style.display == "inline"){
+    oo.style.display = "none";
+    xx.style.display = "none";
+}

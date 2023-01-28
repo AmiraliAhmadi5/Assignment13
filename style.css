@@ -100,7 +100,12 @@ background-color: rgb(123, 123, 209);
     margin-left: 150px;
     display: none;
 }
-
+.butt{
+    background-color: rgb(123, 123, 229);
+    padding: 15 25 15 25;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
 @media only screen and (max-width: 500px){
     #table{
         margin-left: 0px;
@@ -111,7 +116,7 @@ background-color: rgb(123, 123, 209);
 
     }
     #reset{
-        margin-left: -90px;
+        margin-left: 0px;
     }
     .x{
         font-size: 70px;
@@ -126,9 +131,9 @@ background-color: rgb(123, 123, 209);
         font-size: 50px;
     }
     #dd{
-        margin-left: -105px;
+        margin-left: 0px;
     }
     #stylee{
-        margin-left: -180px;
+        margin-left: 0px;
     }
 }
